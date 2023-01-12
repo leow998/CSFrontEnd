@@ -1,0 +1,30 @@
+<div style="background-color: #F8F8F8; min-height: 91vh;">
+
+    <div style="padding-top: 10px;"></div>
+
+    <div style="margin-top:10px;" class="child" *ngFor="let item of items">
+        <div nz-row>
+            <div nz-col nzSpan="8">
+                <img class="profile" style="height: 130px; width: 200px; border-radius: 10px;" [src]="item.processedImg"
+                    alt="profile" />
+            </div>
+            <div nz-col nzSpan="16">
+                <h2 style="cursor: pointer; color: #108ee9;">
+                    {{item.name}}</h2>
+                <p>{{item.description}}</p>
+
+                <hr>
+                <h5>Phone : <b>{{item.phone}}</b> - Tilte : <b>{{item.title}}</b> - Email :
+                    <b>{{item.email}}</b> - Date :
+                    <b>{{item.posting_date}}</b>
+                </h5>
+                <hr>
+                <div style="float: right;">
+                    <button nzSize="small" nz-button nzType="primary"
+                        routerLink="/update-item/{{item.product_id}}">Update</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
